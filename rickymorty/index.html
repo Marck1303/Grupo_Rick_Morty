@@ -31,7 +31,7 @@
     >
       <div id="logo">
         <img
-          src="./fotos/portal.gif"
+          src="./fotos/portal 3.gif"
           alt=""
           class="size-20 rounded-full object-cover"
         />
@@ -46,19 +46,26 @@
       <div>
         <div id="boton-drop">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-11"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-11 text-cyan-400"
+              style="
+                filter:
+                  drop-shadow(-1px -1px 0 #97ce4c)
+                  drop-shadow(1px -1px 0 #97ce4c)
+                  drop-shadow(-1px 1px 0 #97ce4c)
+                  drop-shadow(1px 1px 0 #97ce4c);
+              "
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
         </div>
         <!-- Dropdown menu -->
         <div
@@ -106,16 +113,34 @@
     <main
       class="bg-slate-200 md:px-20 md:py-10 min-h-screen bg-center bg-cover bg-no-repeat"
       style="background-image: url(./fotos/universo.gif);">
-      <div id="hero-section" class="bg-white h-72  bg-center bg-cover bg-no-repeat font-semibold italic p-5"
-        style="background-image: url(./fotos/heroimagen.gif);">
-        <h1 id="herotitulo" class="text-5xl text-cyan-400">La mejor pagina de rick y morty donde encontrarás:</h1>
-        <ul id="heroUl" class=" text-2xl font-semibold p-3 text-cyan-400">
+      <div id="hero-section"
+          class=" bg-white h-72 sm:h-80 md:h-96 lg:h-[500px] bg-center bg-cover bg-no-repeat font-semibold italic p-5 flex flex-col justify-center rounded-3xl"
+          style="background-image: url('./fotos/heroimagen.gif');">
+
+        <h1 id="herotitulo"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-cyan-400"
+            style="text-shadow:
+                    -1px -1px 0 #97ce4c,
+                    1px -1px 0 #97ce4c,
+                    -1px  1px 0 #97ce4c,
+                    1px  1px 0 #97ce4c;">
+          La mejor pagina de Rick y Morty donde encontrarás:
+        </h1>
+
+        <ul id="heroUl"
+            class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold p-3 text-cyan-400"
+            style="text-shadow:
+                    -1px -1px 0 #97ce4c,
+                    1px -1px 0 #97ce4c,
+                    -1px  1px 0 #97ce4c,
+                    1px  1px 0 #97ce4c;">
           <li>Personajes</li>
-          <li>Recapitulacion de Capitulos</li>
+          <li>Recapitulación de Capitulos</li>
           <li>Datos interesantes</li>
           <li>Spoilers :O</li>
-          <li>Datos innecesariamente necesarios </li>
+          <li>Datos innecesariamente necesarios</li>
         </ul>
+
       </div>
 <!--       <div
         id="contenedor-cards"
