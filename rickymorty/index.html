@@ -38,7 +38,7 @@
       </div>
       <div>
         <img
-          src="./fotos/Rick-and-Morty.png"
+          src="./fotos/Rick-and-Morty.gif"
           alt=""
           class="h-28 w-72"
         />
@@ -46,19 +46,26 @@
       <div>
         <div id="boton-drop">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-11"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          xmlns="http://www.w3.org/2000/svg"Add commentMore actions
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-11 text-cyan-400"
+          style="
+            filter:
+              drop-shadow(-1px -1px 0 #97ce4c)
+              drop-shadow(1px -1px 0 #97ce4c)
+              drop-shadow(-1px 1px 0 #97ce4c)
+              drop-shadow(1px 1px 0 #97ce4c);
+          "
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
         </div>
         <!-- Dropdown menu -->
         <div
@@ -117,15 +124,11 @@
             <li>Datos innecesariamente necesarios </li>
           </ul>
         </div>
-      <div
-        id="contenedor-cards"
-        class="grid grid-cols-1 gap-6 p-8 bg-white rounded-2xl md:grid-cols-3 mt-5"
-      >
-        <div class="card flex flex-col items-center justify-center">
-          
-        </div>
+      <div class="w-auto h-auto flex justify-center items-center text-white bg-slate-800 mt-2 rounded-2xl text-3xl"><span>PERSONAJES</span></div>
+      
+      <div id="contenedor-cards" class=" grid grid-cols-1 gap-6 p-8 bg-white rounded-2xl sm:grid-cols-2  md:grid-cols-3 mt-5 lg:grid-cols-4 dark:bg-slate-800" >
       </div>
-      <div class="flex justify-between mt-4">
+      <div class="flex justify-between mt-4 p-3">
         <button id="ant" class="bg-red-500 p-4 rounded-2xl text-white">
           anterior
         </button>
