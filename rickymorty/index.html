@@ -51,69 +51,49 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-11 text-cyan-400"
+          class="size-11 text-cyan-400 md:hidden"
           style="
             filter:
               drop-shadow(-1px -1px 0 #97ce4c)
               drop-shadow(1px -1px 0 #97ce4c)
               drop-shadow(-1px 1px 0 #97ce4c)
-              drop-shadow(1px 1px 0 #97ce4c);
-          "
-        >
+              drop-shadow(1px 1px 0 #97ce4c);">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
-        </svg>
+          </svg>
         </div>
         <!-- Dropdown menu -->
-        <div
-          id="dropdown"
-          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 absolute right-5 md:right-52"
-        >
-          <ul
-            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-            aria-labelledby="dropdownDefaultButton"
-            id="listado-clases"
-          >
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Dashboard</a
-              >
-            </li>
-            <li>hola</li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Settings</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Earnings</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Sign out</a
-              >
-            </li>
-          </ul>
+        <!-- Filtros -->
+        <div id="dropdown"
+        class="z-10 hidden  md:flex md:static md:w-auto bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-56 dark:bg-gray-700 absolute right-5 md:right-52 p-4 text-black dark:text-white">
+
+          <div class="mb-3 ">
+            <label for="estado" class="block text-sm font-semibold">Estado:</label>
+            <select id="filtro-estado" class="w-full p-1 rounded ">
+              <option class="dark:text-black" value="">Todos</option>
+              <option class="dark:text-black" value="alive">Vivo</option>
+              <option class="dark:text-black" value="dead">Muerto</option>
+              <option class="dark:text-black" value="unknown">Desconocido</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="especie" class="block text-sm font-semibold">Especie:</label>
+            <select id="filtro-especie" class="w-full p-1 rounded">
+              <option class="dark:text-black" value="">Todas</option>
+              <option class="dark:text-black" value="Human">Humano</option>
+              <option class="dark:text-black" value="Alien">Alien</option>
+            </select>
+          </div>
         </div>
-      </div>
     </header>
     <main
       class="bg-slate-200 md:px-20 md:py-10 min-h-screen bg-center bg-cover bg-no-repeat "
       style="background-image: url(./fotos/universo.gif);">
-        <div id="hero-section" class="bg-white h-72  bg-center bg-cover bg-no-repeat font-semibold italic p-5"
+        <div id="hero-section" class="bg-white h-auto w-full  bg-center bg-cover bg-no-repeat font-semibold italic p-5"
           style="background-image: url(./fotos/fondo_hero.gif);">
           <h1 id="herotitulo" class="text-5xl text-cyan-400">La mejor pagina de rick y morty donde encontrarás:</h1>
           <ul id="heroUl" class=" text-2xl font-semibold p-3 text-cyan-400">
@@ -137,6 +117,22 @@
         </button>
       </div>
     </main>
-    <footer></footer>
+    <footer class="w-full flex justify-center items-center p-5 dark:bg-gray-900">
+      <!-- SWITCH -->
+ <label class="max-w-screen-xl relative inline-flex items-center cursor-pointer">
+     <input type="checkbox" id="botoncito" class="sr-only peer" />
+     <div class="w-11 h-6 bg-gray-300 rounded-full peer dark:bg-gray-600 peer-checked:bg-gray-300 transition-colors">
+     </div>
+     <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-full peer-checked:bg-gray-800">
+     </div>
+ </label>
+  </footer>
+  <script>
+      let btn = document.querySelector("#botoncito");
+
+      btn.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark");
+      });
+  </script>
   </body>
 </html>
