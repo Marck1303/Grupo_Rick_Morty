@@ -27,13 +27,13 @@
   </head>
   <body>
     <header
-      class="flex justify-around bg-black p-4 text-white items-center relative"
+      class="flex justify-around bg-black p-4 text-white items-center relative "
     >
-      <div id="logo">
+      <div id="botoncito">
         <img
           src="./fotos/portal.gif"
           alt=""
-          class="size-20 rounded-full object-cover"
+          class="size-20 rounded-full object-cover hover: transition-transform hover:scale-125 ease-in-out cursor-pointer md:animate-spin"
         />
       </div>
       <div>
@@ -93,46 +93,51 @@
     <main
       class="bg-slate-200 md:px-20 md:py-10 min-h-screen bg-center bg-cover bg-no-repeat "
       style="background-image: url(./fotos/universo.gif);">
-        <div id="hero-section" class="bg-white h-auto w-full  bg-center bg-cover bg-no-repeat font-semibold italic p-5"
-          style="background-image: url(./fotos/fondo_hero.gif);">
-          <h1 id="herotitulo" class="text-5xl text-cyan-400">La mejor pagina de rick y morty donde encontrarás:</h1>
-          <ul id="heroUl" class=" text-2xl font-semibold p-3 text-cyan-400">
+      <div id="hero-section"
+           class="bg-white h-auto w-full bg-center bg-cover bg-no-repeat font-semibold italic p-5 flex flex-col justify-center items-center text-center"
+           style="background-image: url(./fotos/gift3.gif);">
+          <h1 id="herotitulo"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white"
+              style="
+                text-shadow:
+                  -2px -2px 0 #97ce4c,
+                  2px -2px 0 #97ce4c,
+                  -2px  2px 0 #97ce4c,
+                  2px  2px 0 #97ce4c;">
+            La mejor página de Rick y Morty donde encontrarás:
+          </h1>
+
+          <ul id="heroUl"
+              class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold p-3 text-white"
+              style="
+                text-shadow:
+                  -2px -2px 0 #97ce4c,
+                  2px -2px 0 #97ce4c,
+                  -2px  2px 0 #97ce4c,
+                  2px  2px 0 #97ce4c;">
             <li>Personajes</li>
-            <li>Recapitulacion de Capitulos</li>
+            <li>Recapitulación de capítulos</li>
             <li>Datos interesantes</li>
             <li>Spoilers :O</li>
-            <li>Datos innecesariamente necesarios </li>
+            <li>Datos innecesariamente necesarios</li>
           </ul>
         </div>
+
       <div class="w-auto h-auto flex justify-center items-center text-white bg-slate-800 mt-2 rounded-2xl text-3xl"><span>PERSONAJES</span></div>
       
-      <div id="contenedor-cards" class=" grid grid-cols-1 gap-6 p-8 bg-white rounded-2xl sm:grid-cols-2  md:grid-cols-3 mt-5 lg:grid-cols-4 dark:bg-slate-800" >
+      <div id="contenedor-cards" class=" bg-center bg-cover bg-no-repeat grid grid-cols-1 gap-6 p-8 bg-white rounded-2xl sm:grid-cols-2  md:grid-cols-3 mt-5 lg:grid-cols-4 dark:bg-slate-800" 
+           style="background-image: url(./fotos/portal.jpg);">
       </div>
       <div class="flex justify-between mt-4 p-3">
-        <button id="ant" class="bg-red-500 p-4 rounded-2xl text-white">
+        <button id="ant" class="bg-center bg-cover bg-no-repeat p-4 rounded-2xl text-white hover: transition-transform hover:scale-125 ease-in-out cursor-pointer " 
+                style="background-image: url(./fotos/atras.jpg);">
           anterior
         </button>
-        <button id="sig" class="bg-blue-600 p-4 rounded-2xl text-white">
+        <button id="sig" class="bg-center bg-cover bg-no-repeat  p-4 rounded-2xl text-white hover: transition-transform hover:scale-125 ease-in-out cursor-pointer"
+                style="background-image: url(./fotos/adelante.jpg);">
           siguiente
         </button>
       </div>
     </main>
-    <footer class="w-full flex justify-center items-center p-5 dark:bg-gray-900">
-      <!-- SWITCH -->
- <label class="max-w-screen-xl relative inline-flex items-center cursor-pointer">
-     <input type="checkbox" id="botoncito" class="sr-only peer" />
-     <div class="w-11 h-6 bg-gray-300 rounded-full peer dark:bg-gray-600 peer-checked:bg-gray-300 transition-colors">
-     </div>
-     <div class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:translate-x-full peer-checked:bg-gray-800">
-     </div>
- </label>
-  </footer>
-  <script>
-      let btn = document.querySelector("#botoncito");
-
-      btn.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark");
-      });
-  </script>
   </body>
 </html>

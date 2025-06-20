@@ -20,13 +20,13 @@ function renderizarPersonajes(personajes) {
   contenedor.innerHTML = "";
   personajes.forEach((personaje) => {
     contenedor.innerHTML += `
-      <div class="card bg-slate-600 max-w-xs shadow-lg rounded-xl overflow-hidden transition-transform hover:scale-105 duration-300 p-2">
+      <div class="card bg-white dark:bg-slate-600 max-w-xs shadow-lg rounded-xl overflow-hidden transition-transform hover:scale-105 duration-300 p-2 ">
         <div class="w-full h-56 overflow-hidden bg-gray-200">
           <img src="${personaje.image}" alt="${personaje.name}" class="w-full h-full object-cover" />
         </div>
-        <div class="p-4 flex flex-col items-start gap-2">
+        <div class="p-4 flex flex-col items-start gap-2 ">
           <h3 class="text-sm text-gray-400 font-semibold tracking-wide">#${String(personaje.id).padStart(4, '0')}</h3>
-          <h2 class="text-xl font-bold text-white">${personaje.name}</h2>
+          <h2 class="text-xl font-bold text-black dark:text-white">${personaje.name}</h2>
           <div class="flex w-full justify-between">
             <span class=" text-sm font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">Status: ${personaje.status}</span>
             <span class=" text-sm font-medium px-2 py-1 bg-green-200 text-gray-800 rounded-full">Especie: ${personaje.species}</span>
@@ -91,3 +91,9 @@ document.getElementById("boton-drop").addEventListener("click", () => {
   const drop = document.getElementById("dropdown");
   drop.classList.toggle("hidden");
 });
+
+let btn = document.querySelector("#botoncito");
+
+      btn.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark");
+      });
