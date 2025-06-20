@@ -141,3 +141,5 @@ listaTipos.addEventListener("click", async function (e) {
     }
   }
 });
+
+
